@@ -22,7 +22,7 @@ export function CardPage() {
   return (
     <div className="flex flex-col gap-8">
       <h1 className="m-0 text-[2rem] font-bold">Your card</h1>
-      <CardSummary />
+      {CardSummary()}
       <RecentPayments />
     </div>
   );
