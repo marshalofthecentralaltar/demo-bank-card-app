@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --color-ink: #141b2d;
+  --color-ink-soft: #343d52;
+  --color-paper: #ffffff;
+  --color-mist: #f2f4f8;
+  --color-line: #c9cfdb;
+  --color-brand: #1d2f6f;
+  --color-brand-deep: #121d47;
+  --color-pending: #7a3e00;
+  --color-done: #0f4c3a;
+  --animate-fade-in: fade-in 400ms ease-in-out both;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
