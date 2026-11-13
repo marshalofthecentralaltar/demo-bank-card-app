@@ -1,0 +1,10 @@
+# Each page of the card app lives in its own folder under src/pages/.
+
+# Card page, web path /card
+/src/pages/card/ @nadimmetwalli
+
+# Transfers page, web path /transfers
+/src/pages/transfers/ @nadimmetwalli
+
+# Account page, web path /account
+/src/pages/account/ @marshalofthecentralaltar
