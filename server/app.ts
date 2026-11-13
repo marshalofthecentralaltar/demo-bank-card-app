@@ -38,14 +38,16 @@ export function createApp(options: AppOptions = {}) {
   // One metric sample and one log line per request. Scrapes of /metrics are left out of both.
   app.use((req, res, next) => {
     if (req.path === "/metrics") return next();
+    // Read the path now: routers mounted under a prefix (like /assets) rewrite req.url while they run.
+    const requestPath = req.path;
     const started = process.hrtime.bigint();
     res.on("finish", () => {
       const seconds = Number(process.hrtime.bigint() - started) / 1e9;
-      metrics.observe(req.method, routeLabel(req.path), res.statusCode, seconds);
+      metrics.observe(req.method, routeLabel(requestPath), res.statusCode, seconds);
       requestLog.write({
         time: new Date().toISOString(),
         method: req.method,
-        path: req.path,
+        path: requestPath,
         status: res.statusCode,
         ms: Math.round(seconds * 1000),
       });
