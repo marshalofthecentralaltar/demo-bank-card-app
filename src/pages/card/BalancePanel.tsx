@@ -11,12 +11,12 @@ function timeOfDay(date: Date): string {
 
 export function BalancePanel({ cents, updatedAt }: BalancePanelProps) {
   return (
-    <div className="flex min-w-0 flex-col justify-center gap-2">
-      <span className="text-lg font-semibold text-ink-soft">Balance</span>
-      <span id="balance" className="text-[2.2rem] leading-tight font-bold text-ink tabular-nums">
+    <div className="flex min-w-0 flex-col justify-center gap-3">
+      <span className="text-sm font-semibold uppercase tracking-[0.16em] text-ink-soft">Balance</span>
+      <span id="balance" className="text-[3rem] leading-none font-extrabold tracking-tight text-forest tabular-nums">
         {cents === null ? "…" : formatEur(cents)}
       </span>
-      <span className="text-ink-soft">
+      <span className="inline-flex w-fit items-center rounded-full bg-mint px-4 py-1.5 text-sm font-semibold text-forest">
         Main account · EUR{updatedAt ? ` · updated ${timeOfDay(updatedAt)}` : ""}
       </span>
     </div>

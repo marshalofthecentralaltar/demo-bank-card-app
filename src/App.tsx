@@ -21,10 +21,10 @@ export function App() {
   return (
     <div className="min-h-screen bg-mist">
       <Header currentPath={path} />
-      <main className="mx-auto max-w-5xl px-4 py-8">
+      <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <PageFor path={path} />
       </main>
-      <footer className="mx-auto max-w-5xl px-4 pb-10 text-ink-soft">
+      <footer className="mx-auto max-w-6xl px-4 pb-10 text-sm text-ink-soft sm:px-6">
         Demo Bank is a demonstration product. No real accounts or money.
       </footer>
     </div>
