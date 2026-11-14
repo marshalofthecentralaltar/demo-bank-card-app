@@ -1,11 +1,12 @@
 import { useEffect, useState, type MouseEvent, type ReactNode } from "react";
 
-export type PagePath = "/card" | "/transfers" | "/account";
+export type PagePath = "/card" | "/transfers" | "/account" | "/deploys";
 
 export const PAGES: { path: PagePath; label: string }[] = [
   { path: "/card", label: "Card" },
   { path: "/transfers", label: "Transfers" },
   { path: "/account", label: "Account" },
+  { path: "/deploys", label: "Deploys" },
 ];
 
 const NAVIGATE_EVENT = "demobank:navigate";

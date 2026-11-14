@@ -29,7 +29,7 @@ export function createMetrics() {
   };
 }
 
-const KNOWN_ROUTES = new Set(["/", "/card", "/transfers", "/account", "/api/balance", "/api/transfers"]);
+const KNOWN_ROUTES = new Set(["/", "/card", "/transfers", "/account", "/deploys", "/api/balance", "/api/transfers", "/api/deploys"]);
 
 /** Maps a request path to a bounded route label, so the metric does not grow a series per URL. */
 export function routeLabel(requestPath: string): string {

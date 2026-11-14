@@ -3,6 +3,7 @@ import { usePath } from "./lib/router";
 import { CardPage } from "./pages/card/CardPage";
 import { TransfersPage } from "./pages/transfers/TransfersPage";
 import { AccountPage } from "./pages/account/AccountPage";
+import { DeploysPage } from "./pages/deploys/DeploysPage";
 
 function PageFor({ path }: { path: string }) {
   switch (path) {
@@ -10,6 +11,8 @@ function PageFor({ path }: { path: string }) {
       return <TransfersPage />;
     case "/account":
       return <AccountPage />;
+    case "/deploys":
+      return <DeploysPage />;
     default:
       return <CardPage />;
   }
